@@ -42,6 +42,9 @@ The codepack directory structure is as follows:
     Fig. 5 and Supplementary Figs. S2bc, S3, S4, and S5. Full data
     cannot be made available at this time.
 
+## Contact
+For questions, please contact Evren Gokcen at egokcen@cmu.edu.
+
 ## System requirements
 
 This codepack was written in Matlab (The MathWorks, Inc.), and must be run in 
@@ -63,8 +66,9 @@ properly executed, and will still work correctly.
 
 ## Installation guide
 
-Install [Matlab](https://www.mathworks.com/products/matlab.html).
+Simply download and extract the [latest release](https://github.com/egokcen/mDLAG/releases) of this codepack to your desired local directory.
 
+Install [Matlab](https://www.mathworks.com/products/matlab.html).
 For one script, `sim1/crossval_noARD_sim1.m`, you may need to specifically 
 install the Matlab [Bioinformatics Toolbox](https://www.mathworks.com/help/bioinfo/index.html), 
 if it's not already installed in your Matlab build.
