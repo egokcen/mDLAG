@@ -121,12 +121,20 @@ for j = 1:length(Tu)
     
     % Construct K_big
     K_big = construct_K_mdlag(params,T);
-    K_big_inv = invChol_mex(K_big);
+    try
+        K_big_inv = invChol_mex(K_big);
+    catch
+        K_big_inv = inv(K_big);
+    end
     
     % Compute the full posterior covariance of X
     CPhiC_big = cell(1,T);
     [CPhiC_big{:}] = deal(CPhiC);
-    SigX = invChol_mex(K_big_inv + blkdiag(CPhiC_big{:}));
+    try
+        SigX = invChol_mex(K_big_inv + blkdiag(CPhiC_big{:}));
+    catch
+        SigX = inv(K_big_inv + blkdiag(CPhiC_big{:}));
+    end
     
     % Now, take only subsets of SigX that will have future use
     
